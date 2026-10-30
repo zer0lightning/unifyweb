@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UnifyWeb — Logitech device manager in your browser</title>
+<!--! CSP -->
+<meta name="referrer" content="no-referrer">
+<!--! BUILD-META -->
+<script>
+/*! THEME */
+</script>
+<style>
+/*! STYLES */
+</style>
+</head>
+<body>
+<header class="appbar">
+  <button class="iconbtn ghost only-mobile" data-act="drawer" aria-label="Open menu"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+  <a class="brand" href="#/" aria-label="UnifyWeb home"><span id="mark"></span><span class="wordmark">UnifyWeb</span></a>
+  <div class="grow"></div>
+  <span class="hint hide-mobile">Logitech receivers and devices, in your browser</span>
+  <button class="iconbtn ghost" id="themeBtn" data-act="theme" aria-label="Theme"></button>
+  <button class="primary" data-act="add" aria-label="Add device"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span class="hide-mobile">Add device</span></button>
+</header>
+<div class="banner" id="banner" role="alert"></div>
+<div class="update" id="update" role="status" hidden></div>
+<div class="shell">
+  <nav id="nav" aria-label="Main"></nav>
+  <div class="scrim" data-act="drawer"></div>
+  <main id="main"></main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+/*! SCRIPT */
+</script>
+</body>
+</html>
