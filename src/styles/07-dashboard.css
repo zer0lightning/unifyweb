@@ -1,0 +1,22 @@
+/* ---- Dashboard ---- */
+.h-sec { display:flex; align-items:baseline; gap:10px; margin:6px 2px 12px; }
+.h-sec h2 { font-size:16px; font-weight:680; margin:0; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:12px; margin-bottom:32px; }
+.dcard { display:flex; gap:14px; align-items:center; padding:14px; background:var(--panel); border:1px solid var(--line); border-radius:var(--r-m); color:var(--text); }
+.dcard:hover { text-decoration:none; border-color:var(--faint); }
+.dcard .tile { width:56px; height:56px; } .dcard .tile .i { width:30px; height:30px; stroke-width:1.4; }
+.dc-body { flex:1; min-width:0; }
+.dc-name { font-weight:650; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.dc-sub { color:var(--muted); font-size:13px; }
+.dc-foot { display:flex; gap:12px; align-items:center; margin-top:6px; flex-wrap:wrap; font-size:13px; }
+.chev { color:var(--faint); display:inline-flex; }
+.batt { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--muted); font-variant-numeric:tabular-nums; }
+.batt .cell { width:24px; height:12px; border:1.5px solid currentColor; border-radius:3px; padding:1px; position:relative; }
+.batt .cell::after { content:""; position:absolute; right:-4px; top:2.5px; width:2px; height:4px; background:currentColor; border-radius:0 1px 1px 0; }
+.batt .cell i { display:block; height:100%; border-radius:1px; background:var(--led); }
+.batt.low .cell i { background:var(--warn); } .batt.crit .cell i { background:var(--bad); }
+.batt .i { width:13px; height:13px; color:var(--warn); }
+.slots { display:inline-flex; gap:4px; } .slots i { width:9px; height:9px; border-radius:2px; background:var(--line); border:1px solid var(--line2); } .slots i.on { background:var(--led); border-color:transparent; }
+.lrow { display:flex; gap:12px; align-items:center; padding:12px 0; border-top:1px solid var(--line); color:var(--text); }
+.lrow:hover { text-decoration:none; } .lrow:hover .lr-t b { color:var(--accent); }
+.lr-t { flex:1; min-width:0; } .lr-t b { font-weight:600; display:block; } .lr-t small { color:var(--muted); font-size:13px; }

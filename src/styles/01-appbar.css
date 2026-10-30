@@ -1,0 +1,8 @@
+/* ---- App bar ---- */
+.appbar { position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:12px; height:58px; padding:0 18px; background:var(--bg); border-bottom:1px solid var(--line); }
+.brand { display:flex; align-items:center; gap:10px; color:var(--text); }
+.brand:hover { text-decoration:none; }
+.brand svg { width:28px; height:28px; display:block; }
+.wordmark { font-weight:600; font-size:17px; font-stretch:92%; letter-spacing:-.005em; }
+.grow { flex:1; }
+.hint { color:var(--faint); font-size:13px; }

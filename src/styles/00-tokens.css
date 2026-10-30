@@ -1,0 +1,27 @@
+/* UnifyWeb — "spec sheet & keycaps". Aluminium greys, PCB-green accent, LED status, physical keycap controls. */
+:root {
+  color-scheme: light;
+  --bg:#E8EAED; --rail:#DFE2E6; --panel:#F8F9FA; --panel2:#EFF1F3; --line:#D2D6DB; --line2:#B8BEC6;
+  --text:#1D2126; --muted:#59616B; --faint:#8C939C;
+  --accent:#12694B; --accent-hi:#0D5A3F; --accent-ink:#FFFFFF; --accent-soft:#DCEDE4;
+  --led:#1FAF59; --warn:#A86F06; --bad:#BF3328;
+  --cap:#FCFCFD; --cap-edge:#AEB5BE; --cap-hl:inset 0 1px 0 #fff; --knob:#FFFFFF; --track:#E2E5E9;
+  --grid:rgba(29,33,38,.09);
+  --r-s:6px; --r-m:10px;
+  --font:"Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+:root[data-theme="dark"] { color-scheme: dark;
+    --bg:#1C1F23; --rail:#181B1E; --panel:#24282D; --panel2:#2B3036; --line:#353B42; --line2:#4A515A;
+    --text:#E7E9EB; --muted:#A3AAB3; --faint:#757D87;
+    --accent:#48B987; --accent-hi:#5DCB98; --accent-ink:#0B1F16; --accent-soft:#1E3A2D;
+    --led:#3EDC80; --warn:#E2A63A; --bad:#EF6A5E;
+    --cap:#31363C; --cap-edge:#121417; --cap-hl:inset 0 1px 0 rgba(255,255,255,.07); --knob:#C7CCD2; --track:#1A1D21;
+    --grid:rgba(231,233,235,.07); }
+* { box-sizing:border-box; }
+html, body { margin:0; }
+body { font:15px/1.5 var(--font); background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; font-optical-sizing:auto; }
+a { color:var(--accent); text-decoration:none; text-underline-offset:3px; } a:hover { text-decoration:underline; }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.i { width:18px; height:18px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition:none !important; animation-duration:2s !important; } }

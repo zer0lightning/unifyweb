@@ -1,0 +1,8 @@
+/* ---- Welcome ---- */
+.welcome { padding:40px 40px 32px; max-width:720px; margin:12px auto; display:grid; grid-template-columns:1fr; }
+.welcome .art { width:100%; max-width:360px; height:auto; margin:0 0 8px -6px; }
+.welcome h1 { font-size:36px; line-height:1.1; font-weight:580; font-stretch:93%; letter-spacing:-.018em; margin:16px 0 12px; max-width:20ch; text-wrap:balance; }
+.welcome > p { max-width:56ch; }
+.welcome > button { justify-self:start; margin-top:8px; }
+.welcome .steps { max-width:520px; margin:26px 0 14px; }
+@media (max-width:600px) { .welcome { padding:26px 20px; } .welcome h1 { font-size:28px; } }

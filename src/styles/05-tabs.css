@@ -1,0 +1,5 @@
+/* ---- Tabs ---- */
+.tabs { display:flex; gap:4px; border-bottom:1px solid var(--line); margin:0 0 24px; overflow-x:auto; scrollbar-width:none; position:sticky; top:58px; background:var(--bg); z-index:5; }
+.tab { padding:10px 12px 9px; color:var(--muted); font-size:14.5px; font-weight:600; border-bottom:2px solid transparent; white-space:nowrap; }
+.tab:hover { color:var(--text); text-decoration:none; }
+.tab.active { color:var(--text); border-bottom-color:var(--accent); }

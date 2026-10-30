@@ -1,0 +1,17 @@
+/* ---- Keycap buttons: the one physical, tactile thing in the UI ---- */
+button { font:inherit; font-size:14px; font-weight:600; color:var(--text); background:var(--cap); cursor:pointer;
+  border:1px solid var(--line2); border-bottom:3px solid var(--cap-edge); border-radius:var(--r-s);
+  padding:6px 13px 5px; box-shadow:var(--cap-hl); display:inline-flex; align-items:center; justify-content:center; gap:7px;
+  white-space:nowrap; transition:transform .06s ease, border-color .12s; }
+button:hover:not(:disabled) { border-color:var(--faint); border-bottom-color:var(--cap-edge); }
+button:active:not(:disabled) { transform:translateY(2px); border-bottom-width:1px; padding-bottom:7px; }
+button.primary { background:var(--accent); color:var(--accent-ink); border-color:var(--accent-hi); border-bottom-color:color-mix(in srgb, var(--accent) 55%, #000); box-shadow:inset 0 1px 0 rgba(255,255,255,.18); }
+button.primary:hover:not(:disabled) { border-color:var(--accent-hi); border-bottom-color:color-mix(in srgb, var(--accent) 55%, #000); filter:brightness(1.06); }
+button.ghost { background:transparent; border-color:transparent; box-shadow:none; color:var(--muted); }
+button.ghost:hover:not(:disabled) { background:var(--panel2); border-color:var(--line); border-bottom-color:var(--line2); color:var(--text); }
+button.danger, button.ghost.danger:hover:not(:disabled) { color:var(--bad); }
+button.lg { font-size:15px; padding:9px 18px 8px; }
+button.lg:active:not(:disabled) { padding-bottom:10px; }
+button:disabled { opacity:.45; cursor:not-allowed; }
+.iconbtn { padding:6px 8px 5px; }
+button .i { width:16px; height:16px; }

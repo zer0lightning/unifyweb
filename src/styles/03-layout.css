@@ -1,0 +1,33 @@
+/* ---- Shell & device rail ---- */
+.shell { display:grid; grid-template-columns:264px 1fr; min-height:calc(100vh - 58px); background:linear-gradient(to right, var(--rail) 263px, var(--line) 263px 264px, transparent 264px); }
+nav#nav { position:sticky; top:58px; height:calc(100vh - 58px); overflow:auto; padding:10px 10px 30px; border-right:1px solid var(--line); background:var(--rail); }
+.nav-sec { font-size:12.5px; font-weight:600; color:var(--faint); margin:18px 10px 6px; }
+.nav-sec:first-child { margin-top:8px; }
+.nav-item { display:flex; align-items:center; gap:10px; padding:7px 10px; border-radius:var(--r-s); color:var(--text); font-size:14px; border:1px solid transparent; margin-bottom:1px; }
+.nav-item:hover { background:var(--panel2); text-decoration:none; }
+.nav-item.active { background:var(--panel); border-color:var(--line); }
+.nav-item.child { margin-left:14px; }
+.ni { width:22px; display:grid; place-items:center; color:var(--muted); flex:none; }
+.nav-item.active .ni { color:var(--accent); }
+.nl { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:500; }
+.nl small { display:block; color:var(--muted); font-size:12px; font-weight:400; line-height:1.35; }
+.badge { font-size:12px; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums; }
+.nav-empty { color:var(--faint); font-size:13px; padding:2px 10px 8px; }
+.nav-add { width:100%; margin-top:8px; }
+main { min-width:0; }
+.page { max-width:960px; margin:0 auto; padding:24px 36px 96px; }
+.scrim { display:none; }
+@media (max-width:860px) {
+  .shell { grid-template-columns:1fr; background:none; }
+  nav#nav { position:fixed; top:58px; left:0; bottom:0; width:290px; height:auto; z-index:30; transform:translateX(-100%); transition:transform .2s ease; }
+  body.drawer-open nav#nav { transform:none; box-shadow:12px 0 40px rgba(0,0,0,.25); }
+  body.drawer-open .scrim { display:block; position:fixed; inset:58px 0 0 0; background:rgba(20,22,25,.4); z-index:25; }
+  .page { padding:16px 16px 80px; } .hide-mobile { display:none; } .appbar { padding:0 12px; }
+}
+@media (min-width:861px) { .only-mobile { display:none; } }
+
+/* Build indicator at the bottom of the rail */
+.build { display:flex; flex-direction:column; gap:1px; margin:26px 10px 0; padding-top:12px; border-top:1px solid var(--line); font-size:12px; color:var(--faint); }
+.build:hover { color:var(--muted); text-decoration:none; }
+.build .mono { font-size:11.5px; }
+.build .upd { color:var(--accent); font-weight:600; }
