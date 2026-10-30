@@ -5,7 +5,7 @@ Pair, tune and automate Logitech receivers and devices from the browser. A WebHI
 Runs in **Chrome or Edge** on Windows, macOS, Linux and ChromeOS. Nothing to install.
 
 ## Use it
-
+Try: [UnifyWeb](https://zer0lightning.github.io/unifyweb/)
 ```sh
 npm install
 npm run build        # → dist/unifyweb.html
